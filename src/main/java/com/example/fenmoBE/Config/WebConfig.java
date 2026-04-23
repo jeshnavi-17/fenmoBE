@@ -14,8 +14,11 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5173")
-                        .allowedMethods("GET", "POST")
+                        .allowedOrigins(
+                                "http://localhost:5173",
+                                "https://jeshnavi-17.github.io"
+                        )
+                        .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*");
             }
         };
